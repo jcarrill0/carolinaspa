@@ -1,0 +1,480 @@
+/*** Add your styles here **/
+
+:root {
+	--primario: #E082A8;
+	--secundario: #8ED3CC;
+	--hoverMenu: #BDE8DD;
+	--hoverTabla: #83C3BD;
+	--hoverBoton: #69ACA5;
+	--grisClaro: #F8F8F8;
+	--grisOscuro: #979797;
+	--fuentePrimario: 'Lato', sans-serif;
+	--fuenteSecundario: 'Raleway', sans-serif;
+}
+
+/* Generales */
+
+body {
+	background-color: var(--grisClaro);
+	font-size: 1.4rem;
+}
+
+h1, h2, h3 {
+	font-family: var(--fuenteSecundario);
+} 
+
+.bg-info, .btn-info {
+	background-color: var(--secundario) !important;
+}
+
+.btn-info {
+    padding: 1rem 5rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+}
+
+
+.btn-info:hover {
+	background-color: var(--hoverBoton) !important;
+}
+
+
+.bg-danger, .btn-danger {
+	background-color: var(--primario) !important;
+}
+
+.bg-light {
+	background-color: white !important;
+}
+
+.header-title {
+	font-family: var(--fuentePrimario);
+	font-size: 2.4rem;
+	color: black;
+	line-height: 2.4rem;
+}
+
+.header-title span {
+	font-family: 'Italianno', cursive;
+	font-size: 3.8rem;
+	color: var(--primario);
+}
+
+
+/***************************************/
+/*          PAGINA DE PRINCIPAL        */
+/***************************************/
+
+/* Header */
+
+.encabezado-sitio .nav-link {
+	padding: 0;
+	margin-right: 1rem;
+	color: var(--primario);
+	font-size: 2rem;
+}
+
+.encabezado-sitio .nav-link:last-of-type {
+	margin-right: 0;
+}
+
+.nav-sociales a::before {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.nav-sociales a:hover {
+	color: var(--hoverBoton);
+}
+
+.nav-sociales a[href*='facebook.com']::before {
+    content: '\f082';
+}
+.nav-sociales a[href*='twitter.com']::before {
+    content: '\f081';
+}
+.nav-sociales a[href*='instagram.com']::before {
+    content: '\f16d';
+}
+.nav-sociales a[href*='pinterest.com']::before {
+    content: '\f0d2';
+}
+.nav-sociales a[href*='youtube.com']::before {
+    content: '\f167';
+}
+
+/* Menu de navegacion */
+
+.nav-principal::before{
+	content: '';
+	position: absolute;
+	display: block;
+	height: 1px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-image: url('../img/border_horizontal.png');
+}
+
+.nav-principal::after{
+	content: '';
+	position: absolute;
+	display: block;
+	height: 1px;
+	width: 100%;
+	top: 100%;
+	left: 0;
+	background-image: url('../img/border_horizontal.png');
+}
+
+.menu-principal .nav-item {
+	transition: all .5s ease-in-out;
+}
+
+.menu-principal .nav-item:hover {
+	background-color: var(--hoverMenu) !important;
+}
+
+.menu-principal .nav-link {
+	font-family: var(--fuenteSecundario);
+	color: var(--grisClaro) !important;
+	font-weight: 400;
+	transition: all .5s ease-in-out;
+}
+
+.menu-principal .nav-item:hover .nav-link {
+	color: black !important;
+}
+
+/* Carousel */
+
+.carousel-main .carousel-caption h3 {
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+/* Encabezado */
+
+.encabezado .descripcion {
+	color: var(--grisOscuro);
+	font-size: 1.6rem;
+}
+
+/* Servicios */
+
+.servicios .info {
+	position: absolute;
+	width: 80%;
+	top: 63%;
+	left: 10%;
+	/* margin-left: calc((100% - 80%) / 2); */
+}
+
+.servicios .btn-danger {
+	color: white;
+	font-size: 1.2rem;
+	line-height: 1rem;
+}
+
+.servicios .nosotros-card {
+	margin-bottom: 7rem;
+}
+
+.servicios img {
+	transition: transform .3s ease;
+}
+
+.servicios img:hover {
+	-webkit-transform: rotate(10deg) scale(1.2);
+	-ms-transform: rotate(10deg) scale(1.2);
+	transform: rotate(10deg) scale(1.2);
+}
+
+.servicios .btn-danger:hover {
+	background-color: var(--hoverBoton) !important;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.nosotros-card .header-title {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+	}
+
+	.nosotros-card .header-title span {
+		font-size: 3rem;
+	}
+}
+
+/* Horario */
+.horario h2 {
+	font-size: 2.2rem;
+	font-family: var(--fuentePrimario);
+}
+
+.horario p {
+	font-family: var(--fuenteSecundario);
+}
+
+.horario .table {
+	font-size: 1.2rem;
+	border: 2px solid var(--primario);
+}
+
+.horario .table thead {
+	font-size: 1rem;
+	background-color: var(--primario);
+}
+
+.horario .table td, 
+.horario .table thead th {
+	border: none;
+}
+
+.horario .table tbody tr td {
+	padding: .4rem;
+	font-family: var(--fuentePrimario);
+}
+
+.horario .bg-horario {
+	min-height: 400px;
+	background-image: url('../img/bg_horarios.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+
+
+/* Productos */
+
+.productos .card-title {
+	font-family: var(--fuentePrimario);
+	font-size: 1.2rem;
+	color: var(--primario);
+}
+
+.productos .card-text {
+	font-size: .8rem;
+}
+
+.productos .card-precio {
+	font-size: 1.5rem;
+	color: var(--grisOscuro);
+	font-weight: 300;
+}
+
+/* Cita */
+
+.cita {
+	color: white;
+	background-image: url('../img/bg_citas.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+
+.cita .header-title {
+	color: white;
+	font-size: 3.5rem;
+	line-height: 4rem;
+}
+
+.cita p {
+	font-size: 1.2rem;
+	line-height: 2;
+}
+
+/* Footer */
+.footer h2 {
+	font-family: var(--fuentePrimario);
+	font-size: 1.75rem;
+	font-weight: 600;
+}
+
+.footer p {
+	font-size: 1rem;
+}
+
+.footer .nav-link {
+	color: var(--primario);
+	padding: .5rem;
+	font-size: 1.7rem;
+}
+
+.footer .copyright {
+	font-size: .8rem;
+	color: var(--grisOscuro);
+}
+
+.banner {
+	position: relative;
+	height: 29rem;
+	background-position: center center;
+}
+
+
+/***************************************/
+/*          PAGINA DE NOSOTROS         */
+/***************************************/
+
+.banner.nosotros {
+	background-image: url('../img/nosotros.jpg');
+}
+
+.banner-title {
+	position: absolute;
+	margin: 0;
+	padding: 1rem 3rem;
+	font-size: 2.8rem;
+	font-weight: 900;
+	bottom: 2.5rem;
+	right: 0;
+}
+
+.principal-nosotros main img {
+	width: 98%;
+}
+
+
+/***************************************/
+/*          PAGINA DE SERVICIOS        */
+/***************************************/
+
+.banner.servicios {
+	background-image: url('../img/servicios.jpg');
+}
+
+.principal-servicios h2,
+.principal-servicios p {
+	font-family: 'Segoe UI', sans-serif;
+}
+
+#servicioAcordion .card-header {
+	background-color: var(--primario);
+}
+
+#servicioAcordion .btn-link {
+	font-family: var(--fuentePrimario);
+	font-size: 1.6rem;
+	text-decoration: none;
+}
+
+#servicioAcordion .card-body p {
+	font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.sidebar .cupon {
+	border: 3px dotted white;
+}
+
+.sidebar h2 {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.sidebar .cupon h2 {
+	font-weight: 400;
+}
+
+
+.sidebar .cupon p {  
+	font-size: 1.2rem;
+}
+
+
+
+/***************************************/
+/*          PAGINA DE PRODUCTOS        */
+/***************************************/
+
+.banner.productos {
+	background-image: url('../img/productos.jpg');
+}
+
+.productos .col-md-3 {
+	margin-bottom: .8rem;
+}
+
+.productos .card-text {
+	line-height: 2.2rem;
+}
+
+.productos .card-columns a {
+	text-decoration: none;
+	color: #000;
+}
+
+.productos .card-columns {
+		column-count: 1;
+}
+
+@media (min-width: 576px) {
+	.productos .card-columns {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 1.25rem;
+		-moz-column-gap: 1.25rem;
+		column-gap: 1.25rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.productos .card-columns {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
+}
+
+
+/***************************************/
+/*          PAGINA DE PRODUCTO        */
+/***************************************/
+.banner.producto {
+	background-image: url('../img/producto_01.jpg');
+}
+
+.principal-producto .sidebar h2 {
+	font-family: 'Segoe UI', sans-serif;
+	font-weight: 600;
+}
+
+.principal-producto .precio h2 {
+	font-size: 1.7rem;
+}
+
+.principal-producto .precio p {
+	font-weight: 300;
+	font-size: 3.3rem;
+}
+
+
+/***************************************/
+/*          PAGINA DE CONTACTO         */
+/***************************************/
+
+.banner.contacto {
+	background-image: url('../img/contacto.jpg');
+}
+
+.formulario-contacto {
+	background-color: white;
+	border: 2px solid #9a9a9a;	
+}
+
+.formulario-contacto label {
+	font-size: 1rem;
+}	
+
+
+
+
+
+
+
+
+
+
